@@ -24,8 +24,10 @@ public class Writer extends CustomExtractor implements ItemWriter<User>{
 		repo.save(users);
 		
 		for(User user : users){
-		super.pushDataToKafka(user);
+			super.pushDataToKafka(user);
 		}
+		
+		super.closeProducer();
 		
 	}
 	
