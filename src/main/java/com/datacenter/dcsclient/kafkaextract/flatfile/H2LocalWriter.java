@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.datacenter.dcsclient.domain.UserObj;
-import com.datacenter.dcsclient.kafkaextract.flatfile.repository.ExtractUsersRepository;
+import com.datacenter.dcsclient.extract.repository.ExtractUsersRepository;
 
 @Component
 public class H2LocalWriter {

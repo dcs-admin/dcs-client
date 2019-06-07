@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.datacenter.dcsclient.domain.UserObj;
+import com.datacenter.dcsclient.extract.repository.ExtractUsersRepository;
 import com.datacenter.dcsclient.kafkaextract.CustomExtractor;
-import com.datacenter.dcsclient.kafkaextract.flatfile.repository.ExtractUsersRepository;
 
 @Component
 public class KafkaWriter extends CustomExtractor implements ItemWriter<UserObj>{

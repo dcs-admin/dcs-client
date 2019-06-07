@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.datacenter.dcsclient.domain.UserObj;
-import com.datacenter.dcsclient.kafkaextract.flatfile.repository.ExtractUsersRepository;
+import com.datacenter.dcsclient.extract.repository.ExtractUsersRepository;
 
 @Component
 public class LoadProcessor implements ItemProcessor<UserObj, UserObj> {

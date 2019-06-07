@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(entityManagerFactoryRef = "extractEntityManagerFactory", transactionManagerRef = "extractTransactionManager", basePackages = {
-		"com.datacenter.dcsclient.kafkaextract.flatfile.repository" })
+		"com.datacenter.dcsclient.extract.repository" })
 public class H2DatabaseConfig {
 
 	@Primary
