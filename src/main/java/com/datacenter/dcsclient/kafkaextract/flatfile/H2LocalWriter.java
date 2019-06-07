@@ -15,7 +15,7 @@ public class H2LocalWriter {
 	@Autowired
 	private ExtractUsersRepository repo;
 	 
-	@Transactional("extractTransactionManager")
+	@Transactional
 	public void write(List<? extends UserObj> userObjs) throws Exception { 
 		 repo.save(userObjs);
 	}
