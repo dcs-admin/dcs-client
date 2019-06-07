@@ -32,9 +32,9 @@ public class CustomTarget implements Runnable {
 		props.put("bootstrap.servers", "localhost:9092");
 		props.put("group.id", "test");
 		props.put("enable.auto.commit", "true");
-		props.put("auto.commit.interval.ms", "1000");
+		props.put("auto.commit.interval.ms", "100000");
 		props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-		props.put("value.deserializer", "com.datacenter.serializer.DeveloperDeserializer");
+		props.put("value.deserializer", "com.datacenter.dcsclient.serializer.DeveloperDeserializer");
 		KafkaConsumer<String, Developer> consumer = new KafkaConsumer<>(props);
 		consumer.subscribe(Arrays.asList(this.topic));
 		while (true) {

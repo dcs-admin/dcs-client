@@ -8,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.datacenter.dcsclient.domain.Developer;
-import com.datacenter.dcsclient.domain.User;
+import com.datacenter.dcsclient.domain.UserObj;
 import com.datacenter.dcsclient.util.Constants;
 
 /**
@@ -21,7 +21,7 @@ public class CustomExtractor implements Runnable {
 	 
 	private Properties props = new Properties();
 	
-	private KafkaProducer<String, User> producer = null;
+	private KafkaProducer<String, UserObj> producer = null;
 	
 	public CustomExtractor() {
 		 
@@ -40,24 +40,23 @@ public class CustomExtractor implements Runnable {
 	@Override
 	public void run() {
 		
-		this.pushDataToKafka(null);
+		this.pushDataToKafka(null, null);
 		
 	}
 	
 	
-	protected void pushDataToKafka(User user){ 
+	public void pushDataToKafka(String topic, UserObj userObj){ 
 		
-		producer.send(new ProducerRecord<String, User>(Constants.OPTION_TOPIC, user));
-		
-		logger.info("Message sent to topic: {}", Constants.OPTION_TOPIC);
+		producer.send(new ProducerRecord<String, UserObj>(topic, userObj)); 
+		logger.info("Message sent to topic: {} : Message: {}", topic, userObj);
 		
 		
 	}
 	
-	protected void closeProducer(){
+	public void closeProducer(){
 		producer.close();
 	}
 	
 	
-	
+	 
 }

@@ -1,0 +1,849 @@
+2019-06-06 21:39:56.463  INFO 17348 --- [main] c.d.dcsclient.DcsClientApplication       : Starting DcsClientApplication v0.0.1-SNAPSHOT on ANJI-PC with PID 17348 (E:\datacenter\gitprojects\dcs-client\target\dcsclient-0.0.1-SNAPSHOT.jar started by Mine in E:\datacenter\gitprojects\dcs-client)
+2019-06-06 21:39:56.463  INFO 17348 --- [main] c.d.dcsclient.DcsClientApplication       : No active profile set, falling back to default profiles: default
+2019-06-06 21:39:56.598  INFO 17348 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29104a: startup date [Thu Jun 06 21:39:56 IST 2019]; root of context hierarchy
+2019-06-06 21:39:58.155  INFO 17348 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'usersRepository' with a different definition: replacing [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-06-06 21:39:58.499  WARN 17348 --- [main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method ScopeConfiguration.stepScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2019-06-06 21:39:58.515  WARN 17348 --- [main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method ScopeConfiguration.jobScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2019-06-06 21:39:58.821  INFO 17348 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$2dacf719] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 21:39:59.779  INFO 17348 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9999 (http)
+2019-06-06 21:39:59.795  INFO 17348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-06 21:39:59.795  INFO 17348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-06-06 21:40:01.769  INFO 17348 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-06 21:40:01.776  INFO 17348 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5182 ms
+2019-06-06 21:40:02.037  INFO 17348 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-06 21:40:02.040  INFO 17348 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2019-06-06 21:40:02.046  INFO 17348 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-06 21:40:02.047  INFO 17348 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-06 21:40:02.047  INFO 17348 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-06 21:40:02.047  INFO 17348 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-06 21:40:03.169  INFO 17348 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-06 21:40:03.199  INFO 17348 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-06 21:40:03.419  INFO 17348 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-06 21:40:03.422  INFO 17348 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-06-06 21:40:03.425  INFO 17348 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-06-06 21:40:03.548  INFO 17348 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-06 21:40:04.017  INFO 17348 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-06-06 21:40:04.258  INFO 17348 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-06-06 21:40:04.261  INFO 17348 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@1d6fd0a
+2019-06-06 21:40:05.181  INFO 17348 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-06 21:40:05.337  INFO 17348 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	compression.type = none
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	bootstrap.servers = [localhost:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	buffer.memory = 33554432
+	timeout.ms = 30000
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	block.on.buffer.full = false
+	ssl.key.password = null
+	max.block.ms = 60000
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	max.in.flight.requests.per.connection = 5
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	ssl.protocol = TLS
+	request.timeout.ms = 30000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	acks = all
+	batch.size = 16384
+	ssl.keystore.location = null
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	retries = 0
+	max.request.size = 1048576
+	value.serializer = class com.datacenter.dcsclient.serializer.UserSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	linger.ms = 1
+
+2019-06-06 21:40:05.384  INFO 17348 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.9.0.0
+2019-06-06 21:40:05.384  INFO 17348 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fc7243c2af4b2b4a
+2019-06-06 21:40:05.987  INFO 17348 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	compression.type = none
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	bootstrap.servers = [localhost:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	buffer.memory = 33554432
+	timeout.ms = 30000
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	block.on.buffer.full = false
+	ssl.key.password = null
+	max.block.ms = 60000
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	max.in.flight.requests.per.connection = 5
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	ssl.protocol = TLS
+	request.timeout.ms = 30000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	acks = all
+	batch.size = 16384
+	ssl.keystore.location = null
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	retries = 0
+	max.request.size = 1048576
+	value.serializer = class com.datacenter.dcsclient.serializer.UserSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	linger.ms = 1
+
+2019-06-06 21:40:05.987  INFO 17348 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.9.0.0
+2019-06-06 21:40:05.987  INFO 17348 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fc7243c2af4b2b4a
+2019-06-06 21:40:06.534  INFO 17348 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29104a: startup date [Thu Jun 06 21:39:56 IST 2019]; root of context hierarchy
+2019-06-06 21:40:06.668  INFO 17348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/run-load-job]}" onto public java.lang.String com.datacenter.dcsclient.controller.JobInvokerController.loadJob() throws java.lang.Exception
+2019-06-06 21:40:06.668  INFO 17348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/run-extract-job]}" onto public java.lang.String com.datacenter.dcsclient.controller.JobInvokerController.extractJob() throws java.lang.Exception
+2019-06-06 21:40:06.668  INFO 17348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-06 21:40:06.668  INFO 17348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-06 21:40:06.759  INFO 17348 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-06 21:40:06.759  INFO 17348 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-06 21:40:06.876  INFO 17348 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-06 21:40:07.129  WARN 17348 --- [main] o.s.b.a.batch.BasicBatchConfigurer       : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2019-06-06 21:40:07.132  INFO 17348 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: POSTGRES
+2019-06-06 21:40:07.382  INFO 17348 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2019-06-06 21:40:07.424  INFO 17348 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from class path resource [org/springframework/batch/core/schema-postgresql.sql]
+2019-06-06 21:40:07.439  INFO 17348 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from class path resource [org/springframework/batch/core/schema-postgresql.sql] in 14 ms.
+2019-06-06 21:40:07.799  INFO 17348 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-06 21:40:07.819  INFO 17348 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-06-06 21:40:07.892  INFO 17348 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9999 (http)
+2019-06-06 21:40:07.898  INFO 17348 --- [main] c.d.dcsclient.DcsClientApplication       : Started DcsClientApplication in 11.95 seconds (JVM running for 12.721)
+2019-06-06 21:40:08.013  INFO 17348 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-06 21:40:08.013  INFO 17348 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-06 21:40:08.038  INFO 17348 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2019-06-06 21:40:08.100  INFO 17348 --- [http-nio-9999-exec-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	value.deserializer = class com.datacenter.dcsclient.serializer.UserDeserializer
+	group.id = topic
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [localhost:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	enable.auto.commit = true
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	check.crcs = true
+	request.timeout.ms = 40000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 1000
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	fetch.min.bytes = 1024
+	send.buffer.bytes = 131072
+	auto.offset.reset = latest
+
+2019-06-06 21:40:08.136  INFO 17348 --- [http-nio-9999-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.9.0.0
+2019-06-06 21:40:08.136  INFO 17348 --- [http-nio-9999-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fc7243c2af4b2b4a
+2019-06-06 21:40:08.458  INFO 17348 --- [http-nio-9999-exec-1] c.d.d.load.postgres.KafkaPostgresTarget  :  Users : 0
+2019-06-06 21:42:41.111  INFO 17348 --- [Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29104a: startup date [Thu Jun 06 21:39:56 IST 2019]; root of context hierarchy
+2019-06-06 21:42:41.126  INFO 17348 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-06-06 21:42:41.126  INFO 17348 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-06-06 21:42:41.126  INFO 17348 --- [Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-06-06 21:42:41.126  INFO 17348 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-06 21:42:58.461  INFO 19164 --- [main] c.d.dcsclient.DcsClientApplication       : Starting DcsClientApplication v0.0.1-SNAPSHOT on ANJI-PC with PID 19164 (E:\datacenter\gitprojects\dcs-client\target\dcsclient-0.0.1-SNAPSHOT.jar started by Mine in E:\datacenter\gitprojects\dcs-client)
+2019-06-06 21:42:58.461  INFO 19164 --- [main] c.d.dcsclient.DcsClientApplication       : No active profile set, falling back to default profiles: default
+2019-06-06 21:42:58.616  INFO 19164 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29104a: startup date [Thu Jun 06 21:42:58 IST 2019]; root of context hierarchy
+2019-06-06 21:43:00.097  INFO 19164 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'usersRepository' with a different definition: replacing [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-06-06 21:43:00.487  WARN 19164 --- [main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method ScopeConfiguration.stepScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2019-06-06 21:43:00.503  WARN 19164 --- [main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method ScopeConfiguration.jobScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2019-06-06 21:43:00.749  INFO 19164 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$2dacf719] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 21:43:01.723  INFO 19164 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9999 (http)
+2019-06-06 21:43:01.738  INFO 19164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-06 21:43:01.738  INFO 19164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-06-06 21:43:03.497  INFO 19164 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-06 21:43:03.497  INFO 19164 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4885 ms
+2019-06-06 21:43:03.757  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-06 21:43:03.757  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2019-06-06 21:43:03.773  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-06 21:43:03.773  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-06 21:43:03.773  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-06 21:43:03.773  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-06 21:43:04.939  INFO 19164 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-06 21:43:04.973  INFO 19164 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-06 21:43:05.187  INFO 19164 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-06 21:43:05.187  INFO 19164 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-06-06 21:43:05.187  INFO 19164 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-06-06 21:43:05.343  INFO 19164 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-06 21:43:05.771  INFO 19164 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-06-06 21:43:05.958  INFO 19164 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-06-06 21:43:05.974  INFO 19164 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@fa86ae
+2019-06-06 21:43:06.892  INFO 19164 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-06 21:43:07.106  INFO 19164 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	compression.type = none
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	bootstrap.servers = [localhost:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	buffer.memory = 33554432
+	timeout.ms = 30000
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	block.on.buffer.full = false
+	ssl.key.password = null
+	max.block.ms = 60000
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	max.in.flight.requests.per.connection = 5
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	ssl.protocol = TLS
+	request.timeout.ms = 30000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	acks = all
+	batch.size = 16384
+	ssl.keystore.location = null
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	retries = 0
+	max.request.size = 1048576
+	value.serializer = class com.datacenter.dcsclient.serializer.UserSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	linger.ms = 1
+
+2019-06-06 21:43:07.160  INFO 19164 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.9.0.0
+2019-06-06 21:43:07.160  INFO 19164 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fc7243c2af4b2b4a
+2019-06-06 21:43:07.734  INFO 19164 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	compression.type = none
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	bootstrap.servers = [localhost:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	buffer.memory = 33554432
+	timeout.ms = 30000
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	block.on.buffer.full = false
+	ssl.key.password = null
+	max.block.ms = 60000
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	max.in.flight.requests.per.connection = 5
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	ssl.protocol = TLS
+	request.timeout.ms = 30000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	acks = all
+	batch.size = 16384
+	ssl.keystore.location = null
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	retries = 0
+	max.request.size = 1048576
+	value.serializer = class com.datacenter.dcsclient.serializer.UserSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	linger.ms = 1
+
+2019-06-06 21:43:07.737  INFO 19164 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.9.0.0
+2019-06-06 21:43:07.737  INFO 19164 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fc7243c2af4b2b4a
+2019-06-06 21:43:08.335  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29104a: startup date [Thu Jun 06 21:42:58 IST 2019]; root of context hierarchy
+2019-06-06 21:43:08.497  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/run-extract-job]}" onto public java.lang.String com.datacenter.dcsclient.controller.JobInvokerController.extractJob() throws java.lang.Exception
+2019-06-06 21:43:08.498  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/run-load-job]}" onto public java.lang.String com.datacenter.dcsclient.controller.JobInvokerController.loadJob() throws java.lang.Exception
+2019-06-06 21:43:08.502  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-06 21:43:08.502  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-06 21:43:08.566  INFO 19164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-06 21:43:08.566  INFO 19164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-06 21:43:08.660  INFO 19164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-06 21:43:08.877  WARN 19164 --- [main] o.s.b.a.batch.BasicBatchConfigurer       : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2019-06-06 21:43:08.881  INFO 19164 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: POSTGRES
+2019-06-06 21:43:09.084  INFO 19164 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2019-06-06 21:43:09.125  INFO 19164 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from class path resource [org/springframework/batch/core/schema-postgresql.sql]
+2019-06-06 21:43:09.146  INFO 19164 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from class path resource [org/springframework/batch/core/schema-postgresql.sql] in 20 ms.
+2019-06-06 21:43:09.468  INFO 19164 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-06 21:43:09.478  INFO 19164 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-06-06 21:43:09.540  INFO 19164 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9999 (http)
+2019-06-06 21:43:09.556  INFO 19164 --- [main] c.d.dcsclient.DcsClientApplication       : Started DcsClientApplication in 11.533 seconds (JVM running for 12.274)
+2019-06-06 21:43:10.064  INFO 19164 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-06 21:43:10.064  INFO 19164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-06 21:43:10.098  INFO 19164 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2019-06-06 21:43:10.152  INFO 19164 --- [http-nio-9999-exec-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	value.deserializer = class com.datacenter.dcsclient.serializer.UserDeserializer
+	group.id = topic
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [localhost:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	enable.auto.commit = true
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	check.crcs = true
+	request.timeout.ms = 40000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 100000
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	fetch.min.bytes = 1024
+	send.buffer.bytes = 131072
+	auto.offset.reset = latest
+
+2019-06-06 21:43:10.190  INFO 19164 --- [http-nio-9999-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.9.0.0
+2019-06-06 21:43:10.190  INFO 19164 --- [http-nio-9999-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fc7243c2af4b2b4a
+2019-06-06 21:44:19.347  INFO 19164 --- [http-nio-9999-exec-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator 2147483647 dead.
+2019-06-06 21:44:40.995  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:40.995  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 170 : {topic=UNKNOWN}
+2019-06-06 21:44:41.098  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:41.098  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 171 : {topic=UNKNOWN}
+2019-06-06 21:44:41.200  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:41.200  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 172 : {topic=UNKNOWN}
+2019-06-06 21:44:41.300  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:41.301  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 173 : {topic=UNKNOWN}
+2019-06-06 21:44:41.401  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:41.402  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 174 : {topic=UNKNOWN}
+2019-06-06 21:44:41.503  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:41.503  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 175 : {topic=UNKNOWN}
+2019-06-06 21:44:41.606  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:41.606  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 176 : {topic=UNKNOWN}
+2019-06-06 21:44:41.708  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:41.708  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 177 : {topic=UNKNOWN}
+2019-06-06 21:44:41.810  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:41.810  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 178 : {topic=UNKNOWN}
+2019-06-06 21:44:41.911  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:41.911  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 179 : {topic=UNKNOWN}
+2019-06-06 21:44:42.013  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:42.013  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 180 : {topic=UNKNOWN}
+2019-06-06 21:44:42.114  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:42.114  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 181 : {topic=UNKNOWN}
+2019-06-06 21:44:42.216  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:42.216  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 182 : {topic=UNKNOWN}
+2019-06-06 21:44:42.317  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:42.317  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 183 : {topic=UNKNOWN}
+2019-06-06 21:44:42.419  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:42.419  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 184 : {topic=UNKNOWN}
+2019-06-06 21:44:42.521  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:42.521  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 185 : {topic=UNKNOWN}
+2019-06-06 21:44:42.622  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:42.623  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 186 : {topic=UNKNOWN}
+2019-06-06 21:44:42.725  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:42.725  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 187 : {topic=UNKNOWN}
+2019-06-06 21:44:42.827  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:42.827  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 188 : {topic=UNKNOWN}
+2019-06-06 21:44:42.929  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:42.929  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 189 : {topic=UNKNOWN}
+2019-06-06 21:44:43.030  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:43.030  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 190 : {topic=UNKNOWN}
+2019-06-06 21:44:43.132  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:43.132  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 191 : {topic=UNKNOWN}
+2019-06-06 21:44:43.234  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:43.235  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 192 : {topic=UNKNOWN}
+2019-06-06 21:44:43.336  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:43.336  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 193 : {topic=UNKNOWN}
+2019-06-06 21:44:43.438  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:43.438  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 194 : {topic=UNKNOWN}
+2019-06-06 21:44:43.539  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:43.539  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 195 : {topic=UNKNOWN}
+2019-06-06 21:44:43.640  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:43.641  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 196 : {topic=UNKNOWN}
+2019-06-06 21:44:43.742  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:43.742  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 197 : {topic=UNKNOWN}
+2019-06-06 21:44:43.843  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:43.843  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 198 : {topic=UNKNOWN}
+2019-06-06 21:44:43.945  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:43.946  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 199 : {topic=UNKNOWN}
+2019-06-06 21:44:44.046  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:44.046  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 200 : {topic=UNKNOWN}
+2019-06-06 21:44:44.147  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:44.148  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 201 : {topic=UNKNOWN}
+2019-06-06 21:44:44.249  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:44.250  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 202 : {topic=UNKNOWN}
+2019-06-06 21:44:44.350  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:44.350  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 203 : {topic=UNKNOWN}
+2019-06-06 21:44:44.452  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:44.452  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 204 : {topic=UNKNOWN}
+2019-06-06 21:44:44.553  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:44.553  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 205 : {topic=UNKNOWN}
+2019-06-06 21:44:44.655  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:44.655  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 206 : {topic=UNKNOWN}
+2019-06-06 21:44:44.757  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:44.757  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 207 : {topic=UNKNOWN}
+2019-06-06 21:44:44.858  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:44.859  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 208 : {topic=UNKNOWN}
+2019-06-06 21:44:44.959  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:44.959  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 209 : {topic=UNKNOWN}
+2019-06-06 21:44:45.061  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:45.061  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 210 : {topic=UNKNOWN}
+2019-06-06 21:44:45.162  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:45.162  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 211 : {topic=UNKNOWN}
+2019-06-06 21:44:45.264  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:45.264  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 212 : {topic=UNKNOWN}
+2019-06-06 21:44:45.365  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.common.protocol.Errors  : Unexpected error code: 38.
+2019-06-06 21:44:45.365  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 213 : {topic=UNKNOWN}
+2019-06-06 21:44:45.524  WARN 19164 --- [http-nio-9999-exec-1] org.apache.kafka.clients.NetworkClient   : Error while fetching metadata with correlation id 214 : {topic=LEADER_NOT_AVAILABLE}
+2019-06-06 21:44:48.754  INFO 19164 --- [http-nio-9999-exec-1] o.a.k.c.c.internals.AbstractCoordinator  : Attempt to heart beat failed since coordinator is either not started or not valid, marking it as dead.
+2019-06-06 21:44:48.754  INFO 19164 --- [http-nio-9999-exec-1] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator 2147483647 dead.
+2019-06-06 21:45:23.787 ERROR 19164 --- [http-nio-9999-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException: A job instance already exists and is complete for parameters={source=extractJob}.  If you want to run this job again, change the parameters.] with root cause
+
+org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException: A job instance already exists and is complete for parameters={source=extractJob}.  If you want to run this job again, change the parameters.
+	at org.springframework.batch.core.repository.support.SimpleJobRepository.createJobExecution(SimpleJobRepository.java:126)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.batch.core.repository.support.AbstractJobRepositoryFactoryBean$1.invoke(AbstractJobRepositoryFactoryBean.java:172)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy75.createJobExecution(Unknown Source)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:127)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy72.run(Unknown Source)
+	at com.datacenter.dcsclient.controller.JobInvokerController.extractJob(JobInvokerController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+
+2019-06-06 21:45:55.410  INFO 19164 --- [http-nio-9999-exec-3] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	value.deserializer = class com.datacenter.dcsclient.serializer.UserDeserializer
+	group.id = topic
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [localhost:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	enable.auto.commit = true
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	check.crcs = true
+	request.timeout.ms = 40000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 100000
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	fetch.min.bytes = 1024
+	send.buffer.bytes = 131072
+	auto.offset.reset = latest
+
+2019-06-06 21:45:55.413  INFO 19164 --- [http-nio-9999-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.9.0.0
+2019-06-06 21:45:55.414  INFO 19164 --- [http-nio-9999-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fc7243c2af4b2b4a
+2019-06-06 21:45:58.172  INFO 19164 --- [http-nio-9999-exec-1] o.a.k.c.c.internals.AbstractCoordinator  : Attempt to heart beat failed since the group is rebalancing, try to re-join group.
+2019-06-06 21:47:42.371  INFO 19164 --- [Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29104a: startup date [Thu Jun 06 21:42:58 IST 2019]; root of context hierarchy
+2019-06-06 21:47:42.386  INFO 19164 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-06-06 21:47:42.386  INFO 19164 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-06-06 21:47:42.386  INFO 19164 --- [Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-06-06 21:47:42.386  INFO 19164 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-06 21:47:46.437  INFO 19164 --- [http-nio-9999-exec-3] o.a.k.c.c.internals.AbstractCoordinator  : Marking the coordinator 2147483647 dead.
+2019-06-06 22:02:35.810  INFO 10392 --- [main] c.d.dcsclient.DcsClientApplication       : Starting DcsClientApplication v0.0.2-SNAPSHOT on ANJI-PC with PID 10392 (E:\datacenter\gitprojects\dcs-client\target\dcsclient-0.0.2-SNAPSHOT.jar started by Mine in E:\datacenter\gitprojects\dcs-client)
+2019-06-06 22:02:35.814  INFO 10392 --- [main] c.d.dcsclient.DcsClientApplication       : No active profile set, falling back to default profiles: default
+2019-06-06 22:02:35.901  INFO 10392 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29104a: startup date [Thu Jun 06 22:02:35 IST 2019]; root of context hierarchy
+2019-06-06 22:02:37.308  INFO 10392 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'usersRepository' with a different definition: replacing [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2019-06-06 22:02:37.727  WARN 10392 --- [main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method ScopeConfiguration.stepScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2019-06-06 22:02:37.748  WARN 10392 --- [main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method ScopeConfiguration.jobScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2019-06-06 22:02:38.047  INFO 10392 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$2dacf719] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-06 22:02:39.022  INFO 10392 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9999 (http)
+2019-06-06 22:02:39.036  INFO 10392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-06 22:02:39.037  INFO 10392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-06-06 22:02:40.842  INFO 10392 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-06 22:02:40.843  INFO 10392 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4945 ms
+2019-06-06 22:02:41.097  INFO 10392 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-06 22:02:41.099  INFO 10392 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2019-06-06 22:02:41.106  INFO 10392 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-06 22:02:41.106  INFO 10392 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-06 22:02:41.106  INFO 10392 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-06 22:02:41.106  INFO 10392 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-06 22:02:42.135  INFO 10392 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-06-06 22:02:42.164  INFO 10392 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-06 22:02:42.353  INFO 10392 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-06-06 22:02:42.356  INFO 10392 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-06-06 22:02:42.358  INFO 10392 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-06-06 22:02:42.468  INFO 10392 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-06-06 22:02:42.906  INFO 10392 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-06-06 22:02:43.154  INFO 10392 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-06-06 22:02:43.156  INFO 10392 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@1d6fd0a
+2019-06-06 22:02:44.063  INFO 10392 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-06 22:02:44.237  INFO 10392 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	compression.type = none
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	bootstrap.servers = [localhost:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	buffer.memory = 33554432
+	timeout.ms = 30000
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	block.on.buffer.full = false
+	ssl.key.password = null
+	max.block.ms = 60000
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	max.in.flight.requests.per.connection = 5
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	ssl.protocol = TLS
+	request.timeout.ms = 30000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	acks = all
+	batch.size = 16384
+	ssl.keystore.location = null
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	retries = 0
+	max.request.size = 1048576
+	value.serializer = class com.datacenter.dcsclient.serializer.UserSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	linger.ms = 1
+
+2019-06-06 22:02:44.285  INFO 10392 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.9.0.0
+2019-06-06 22:02:44.285  INFO 10392 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fc7243c2af4b2b4a
+2019-06-06 22:02:44.789  INFO 10392 --- [main] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	compression.type = none
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	metadata.fetch.timeout.ms = 60000
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	bootstrap.servers = [localhost:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	buffer.memory = 33554432
+	timeout.ms = 30000
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	block.on.buffer.full = false
+	ssl.key.password = null
+	max.block.ms = 60000
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	max.in.flight.requests.per.connection = 5
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	ssl.protocol = TLS
+	request.timeout.ms = 30000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	acks = all
+	batch.size = 16384
+	ssl.keystore.location = null
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	retries = 0
+	max.request.size = 1048576
+	value.serializer = class com.datacenter.dcsclient.serializer.UserSerializer
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	send.buffer.bytes = 131072
+	linger.ms = 1
+
+2019-06-06 22:02:44.792  INFO 10392 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.9.0.0
+2019-06-06 22:02:44.792  INFO 10392 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fc7243c2af4b2b4a
+2019-06-06 22:02:45.312  INFO 10392 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29104a: startup date [Thu Jun 06 22:02:35 IST 2019]; root of context hierarchy
+2019-06-06 22:02:45.435  INFO 10392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/run-extract-job]}" onto public java.lang.String com.datacenter.dcsclient.controller.JobInvokerController.extractJob() throws java.lang.Exception
+2019-06-06 22:02:45.436  INFO 10392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/run-load-job]}" onto public java.lang.String com.datacenter.dcsclient.controller.JobInvokerController.loadJob() throws java.lang.Exception
+2019-06-06 22:02:45.439  INFO 10392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-06 22:02:45.440  INFO 10392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-06 22:02:45.500  INFO 10392 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-06 22:02:45.500  INFO 10392 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-06 22:02:45.572  INFO 10392 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-06 22:02:45.772  WARN 10392 --- [main] o.s.b.a.batch.BasicBatchConfigurer       : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2019-06-06 22:02:45.775  INFO 10392 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: POSTGRES
+2019-06-06 22:02:45.955  INFO 10392 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2019-06-06 22:02:45.989  INFO 10392 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from class path resource [org/springframework/batch/core/schema-postgresql.sql]
+2019-06-06 22:02:46.004  INFO 10392 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from class path resource [org/springframework/batch/core/schema-postgresql.sql] in 15 ms.
+2019-06-06 22:02:46.302  INFO 10392 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-06 22:02:46.317  INFO 10392 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-06-06 22:02:46.367  INFO 10392 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9999 (http)
+2019-06-06 22:02:46.372  INFO 10392 --- [main] c.d.dcsclient.DcsClientApplication       : Started DcsClientApplication in 11.004 seconds (JVM running for 11.87)
+2019-06-06 22:03:00.186  INFO 10392 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-06 22:03:00.187  INFO 10392 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-06 22:03:00.218  INFO 10392 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2019-06-06 22:03:00.270  INFO 10392 --- [http-nio-9999-exec-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	metric.reporters = []
+	metadata.max.age.ms = 300000
+	value.deserializer = class com.datacenter.dcsclient.serializer.UserDeserializer
+	group.id = topic
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	reconnect.backoff.ms = 50
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	max.partition.fetch.bytes = 1048576
+	bootstrap.servers = [localhost:9092]
+	retry.backoff.ms = 100
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	ssl.keystore.type = JKS
+	ssl.trustmanager.algorithm = PKIX
+	enable.auto.commit = true
+	ssl.key.password = null
+	fetch.max.wait.ms = 500
+	sasl.kerberos.min.time.before.relogin = 60000
+	connections.max.idle.ms = 540000
+	ssl.truststore.password = null
+	session.timeout.ms = 30000
+	metrics.num.samples = 2
+	client.id = 
+	ssl.endpoint.identification.algorithm = null
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	ssl.protocol = TLS
+	check.crcs = true
+	request.timeout.ms = 40000
+	ssl.provider = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.keystore.location = null
+	heartbeat.interval.ms = 3000
+	auto.commit.interval.ms = 100000
+	receive.buffer.bytes = 32768
+	ssl.cipher.suites = null
+	ssl.truststore.type = JKS
+	security.protocol = PLAINTEXT
+	ssl.truststore.location = null
+	ssl.keystore.password = null
+	ssl.keymanager.algorithm = SunX509
+	metrics.sample.window.ms = 30000
+	fetch.min.bytes = 1024
+	send.buffer.bytes = 131072
+	auto.offset.reset = latest
+
+2019-06-06 22:03:00.307  INFO 10392 --- [http-nio-9999-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 0.9.0.0
+2019-06-06 22:03:00.307  INFO 10392 --- [http-nio-9999-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : fc7243c2af4b2b4a
+2019-06-06 22:04:40.636  INFO 10392 --- [Thread-4] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29104a: startup date [Thu Jun 06 22:02:35 IST 2019]; root of context hierarchy
+2019-06-06 22:04:40.638  INFO 10392 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-06-06 22:04:40.638  INFO 10392 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2019-06-06 22:04:40.639  INFO 10392 --- [Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-06-06 22:04:40.641  INFO 10392 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
