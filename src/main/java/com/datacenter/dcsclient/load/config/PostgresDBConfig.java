@@ -67,7 +67,6 @@ public class PostgresDBConfig
        {
            LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
            factory.setDataSource(loadDataSource());
-           //factory.setJpaDialect(jpaDialect());
            factory.setPackagesToScan(new String[]{"com.datacenter.dcsclient.domain"});
            factory.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
            factory.setJpaDialect(jpaDialect());

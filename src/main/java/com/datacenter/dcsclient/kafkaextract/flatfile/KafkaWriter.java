@@ -4,12 +4,9 @@ import java.util.List;
 
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.datacenter.dcsclient.domain.Person;
-import com.datacenter.dcsclient.extract.repository.ExtractUsersRepository;
 import com.datacenter.dcsclient.kafkaextract.CustomExtractor;
 
 @Component
