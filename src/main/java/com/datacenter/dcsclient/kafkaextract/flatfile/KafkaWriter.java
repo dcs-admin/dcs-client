@@ -8,12 +8,12 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.datacenter.dcsclient.domain.UserObj;
+import com.datacenter.dcsclient.domain.Person;
 import com.datacenter.dcsclient.extract.repository.ExtractUsersRepository;
 import com.datacenter.dcsclient.kafkaextract.CustomExtractor;
 
 @Component
-public class KafkaWriter extends CustomExtractor implements ItemWriter<UserObj>{
+public class KafkaWriter extends CustomExtractor implements ItemWriter<Person>{
 	 
 	private String topic;
 	
@@ -22,14 +22,14 @@ public class KafkaWriter extends CustomExtractor implements ItemWriter<UserObj>{
 	
 
 	@Override 
-	public void write(List<? extends UserObj> userObjs) throws Exception {
+	public void write(List<? extends Person> persons) throws Exception {
 		
 		
-		for(UserObj userObj : userObjs){
-			super.pushDataToKafka(this.topic, userObj);
+		for(Person person : persons){
+			super.pushDataToKafka(this.topic, person);
 		}
 		
-		h2LocalWriter.write(userObjs);
+		h2LocalWriter.write(persons);
 		//super.closeProducer(); 
 	}
 

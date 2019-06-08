@@ -9,7 +9,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class UserObj {
+public class Person {
 	
 	@Id
 	private Long userId;
@@ -51,6 +51,23 @@ public class UserObj {
 	public void setAccount(BigDecimal account) {
 		this.account = account;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Person [userId=");
+		builder.append(userId);
+		builder.append(", name=");
+		builder.append(name);
+		builder.append(", dept=");
+		builder.append(dept);
+		builder.append(", account=");
+		builder.append(account);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
 	
 	
 }

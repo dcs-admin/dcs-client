@@ -8,13 +8,13 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.datacenter.dcsclient.domain.UserObj;
+import com.datacenter.dcsclient.domain.Person;
 import com.datacenter.dcsclient.kafkaextract.CustomExtractor;
 import com.datacenter.dcsclient.load.repository.LoadUsersRepository;
 
 @Component
 @EnableCaching
-public class LoadWriter extends CustomExtractor implements ItemWriter<UserObj>{
+public class LoadWriter extends CustomExtractor implements ItemWriter<Person>{
 	
 	//@Autowired
 	//private LoadUsersRepository repo; 
@@ -22,11 +22,11 @@ public class LoadWriter extends CustomExtractor implements ItemWriter<UserObj>{
 
 	@Override
 	//@Transactional("loadTransactionManager")
-	public void write(List<? extends UserObj> userObjs) throws Exception {
+	public void write(List<? extends Person> persons) throws Exception {
 		//repo.save(userObjs);
 		
-		for(UserObj userObj : userObjs){
-			super.pushDataToKafka(null,userObj);
+		for(Person person : persons){
+			super.pushDataToKafka(null,person);
 		}
 		
 		super.closeProducer();

@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
-import com.datacenter.dcsclient.domain.UserObj;
+import com.datacenter.dcsclient.domain.Person;
 
  
 
@@ -42,7 +42,7 @@ public class ExtractJobStepPlanner extends JobExecutionListenerSupport {
 	public Job extractJobPlan() {
 
 		Step step = stepBuilderFactory.get("step-1")
-				.<UserObj, UserObj> chunk(100)
+				.<Person, Person> chunk(100)
 				.reader(new Reader(resource))
 				.processor(processor)
 				.writer(kafkaWriter)

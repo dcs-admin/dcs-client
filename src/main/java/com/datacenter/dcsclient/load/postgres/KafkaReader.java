@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.datacenter.dcsclient.domain.UserObj;
+import com.datacenter.dcsclient.domain.Person;
 
 /**
  * @author pavan.solapure
@@ -79,7 +79,7 @@ public class KafkaReader  {
 					System.out.println("offset = " + record.offset() + ", value = " + record.value());
 					
 					try {
-						postgresWriter.write((UserObj)record.value());
+						postgresWriter.write((Person)record.value());
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();

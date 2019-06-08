@@ -4,22 +4,22 @@ import java.util.Map;
 
 import org.apache.kafka.common.serialization.Deserializer;
 
-import com.datacenter.dcsclient.domain.UserObj;
+import com.datacenter.dcsclient.domain.Person;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class UserDeserializer implements Deserializer<UserObj> {
+public class UserDeserializer implements Deserializer<Person> {
 
 	@Override
-	public UserObj deserialize(String arg0, byte[] devBytes) {
+	public Person deserialize(String arg0, byte[] devBytes) {
 		ObjectMapper mapper = new ObjectMapper();
-		UserObj userObj = null;
+		Person person = null;
 		try {
-			userObj = mapper.readValue(devBytes, UserObj.class);
+			person = mapper.readValue(devBytes, Person.class);
 		} catch (Exception e) {
 
 			e.printStackTrace();
 		}
-		return userObj;
+		return person;
 	}
 
 	@Override

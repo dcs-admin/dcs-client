@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.datacenter.dcsclient.kafkaextract.flatfile.KafkaWriter;
 import com.datacenter.dcsclient.load.postgres.KafkaReader;
-import com.datacenter.dcsclient.util.Constants;
  
 @RestController
 public class JobInvokerController {
@@ -24,9 +23,9 @@ public class JobInvokerController {
     @Qualifier("extractJob")
     Job extractJob;
     
-    @Autowired
-    @Qualifier("loadJob")
-    Job loadJob;
+    //@Autowired
+    //@Qualifier("loadJob")
+    //Job loadJob;
     
     @Autowired
     KafkaWriter kafkaWriter;

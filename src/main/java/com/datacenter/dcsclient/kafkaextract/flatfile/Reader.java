@@ -6,9 +6,9 @@ import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.core.io.Resource;
 
-import com.datacenter.dcsclient.domain.UserObj;
+import com.datacenter.dcsclient.domain.Person;
 
-public class Reader extends FlatFileItemReader<UserObj> {
+public class Reader extends FlatFileItemReader<Person> {
 	
 	public Reader(Resource resource) {
 		
@@ -21,10 +21,10 @@ public class Reader extends FlatFileItemReader<UserObj> {
 		lineTokenizer.setDelimiter(",");
 	    lineTokenizer.setStrict(false);
 	    
-	    BeanWrapperFieldSetMapper<UserObj> fieldSetMapper = new BeanWrapperFieldSetMapper<>();
-        fieldSetMapper.setTargetType(UserObj.class);
+	    BeanWrapperFieldSetMapper<Person> fieldSetMapper = new BeanWrapperFieldSetMapper<>();
+        fieldSetMapper.setTargetType(Person.class);
 
-		DefaultLineMapper<UserObj> defaultLineMapper = new DefaultLineMapper<>();
+		DefaultLineMapper<Person> defaultLineMapper = new DefaultLineMapper<>();
 		defaultLineMapper.setLineTokenizer(lineTokenizer);
 		defaultLineMapper.setFieldSetMapper(fieldSetMapper);
 		setLineMapper(defaultLineMapper);

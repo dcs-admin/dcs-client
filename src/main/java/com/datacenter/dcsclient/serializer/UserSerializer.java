@@ -4,17 +4,17 @@ import java.util.Map;
 
 import org.apache.kafka.common.serialization.Serializer;
 
-import com.datacenter.dcsclient.domain.UserObj;
+import com.datacenter.dcsclient.domain.Person;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class UserSerializer implements Serializer<UserObj> {
+public class UserSerializer implements Serializer<Person> {
 
 	@Override
-	public byte[] serialize(String arg0, UserObj userObj) {
+	public byte[] serialize(String arg0, Person person) {
 		byte[] serializedBytes = null;
 		ObjectMapper objectMapper = new ObjectMapper();
 		try {
-			serializedBytes = objectMapper.writeValueAsString(userObj).getBytes();
+			serializedBytes = objectMapper.writeValueAsString(person).getBytes();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

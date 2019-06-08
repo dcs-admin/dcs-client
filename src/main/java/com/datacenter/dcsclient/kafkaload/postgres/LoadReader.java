@@ -6,11 +6,11 @@ import org.springframework.batch.item.support.IteratorItemReader;
 
 //import org.springframework.batch.item.kafka.KafkaItemReader;
 
-import com.datacenter.dcsclient.domain.UserObj;
+import com.datacenter.dcsclient.domain.Person;
 
-public class LoadReader extends IteratorItemReader<UserObj> {
+public class LoadReader extends IteratorItemReader<Person> {
 	
-	public LoadReader(Iterable<UserObj> iterable) {
+	public LoadReader(Iterable<Person> iterable) {
 		super(iterable);
 		// TODO Auto-generated constructor stub
 	}
@@ -18,7 +18,7 @@ public class LoadReader extends IteratorItemReader<UserObj> {
 //extends KafkaItemReader<Long, User> {
 	
 	@Override
-	public UserObj read() throws Exception, UnexpectedInputException, ParseException {
+	public Person read() throws Exception, UnexpectedInputException, ParseException {
 		 
 		
 		
