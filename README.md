@@ -19,3 +19,5 @@ bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic
 
 ```
  
+### Reference
+https://dzone.com/articles/netflix-eureka-discovery-microservice
